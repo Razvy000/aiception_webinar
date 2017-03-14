@@ -1,0 +1,63 @@
+Why pip?
+The PyPA recommended tool for installing Python packages.
+
+# get pip
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python get-pip.py
+
+# install virtualenv and virtualenvwrapper
+sudo pip install virtualenv virtualenvwrapper
+sudo rm -rf ~/.cache/pip
+
+# update profile to use virtualenv and venvwrapper
+sudo nano ~/.profile
+
+	# virtualenv and virtualenvwrapper
+	export WORKON_HOME=$HOME/.virtualenvs
+	source /usr/local/bin/virtualenvwrapper.sh
+
+
+# reload the updated profile
+source ~/.profile
+
+
+
+
+
+Why virtualenv?
+virtualenv is a tool to create isolated Python environments.
+virtualenvwrapper is a set of extensions to Ian Bicking’s virtualenv tool. 
+
+project1
+	package awesome-version1
+
+project2
+	package awesome-version2
+
+How can you use both versions at the same time?
+virtualenv can help you. It creates an environment that has its own installation directories, that doesn’t share libraries with other virtualenv environments
+
+
+
+
+which python
+	# system python
+
+mkvirtualenv aiception -p python3
+
+which python
+	# aiception project python
+
+
+
+
+tip: anaconda
+	https://www.continuum.io/downloads
+
+
+
+
+
+workon aiception
+
+deactivate

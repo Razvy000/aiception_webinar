@@ -1,0 +1,20 @@
+
+ssh -Y 192.168.1.105
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo raspi-config
+	# chance user pass
+	# enable camera
+	# enable ssh
+	# expand filesystem
+sudo reboot
+sudo rpi-update
+sudo reboot
+
+
+natilus trick
+	#ctr+l 
+	#ssh://pi@192.168.1.105
+
+raspistill -o image.jpg

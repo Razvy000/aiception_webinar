@@ -1,0 +1,15 @@
+
+Using a Raspberry Pi with a camera:
+
+	connect Pubnub
+
+	while true
+		take image 
+		upload to aws s3 bucket
+		publish to Pubnub
+			calls AIception block
+				processes the image
+		if squirrel
+			close door
+			take video recording
+			open door

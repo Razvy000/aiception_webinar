@@ -1,0 +1,96 @@
+https://www.pubnub.com
+
+
+create app
+
+import block
+	https://www.pubnub.com/blocks-catalog/
+	https://www.pubnub.com/blocks-catalog/aiception-object-detection/
+
+create event handler
+
+documentation
+	https://www.pubnub.com/docs/blocks/introduction
+
+
+##############################
+Event handler
+
+export default (request) => {
+    const xhr    = require('xhr');
+    const base64 = require('codec/base64');
+
+    // TODO: set authToken
+    const authToken = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+    const action = request.message.action;
+    const body = request.message.body;
+
+    var url = "";
+    var fetchUrl = "";
+    var method = "POST";
+
+    switch(action){
+        case "face":
+            url = "/face";
+            break;
+        case "face-age":
+            url = "/face_age";
+            break;
+        case "detect-object":
+            url = "/detect_object";
+            break;
+        case "adult-content":
+            url = "/adult_content";
+            break;
+        case "artistic-image":
+            url = "/artistic_image";
+            break;
+        case "get-location":
+            url = request.message.location;
+            method = "GET";
+            break;
+    }
+
+    const baseUrl = "https://aiception.com/api/v2.1";
+
+    const httpOptions = {
+        "method": method,
+        "headers": {
+            "Authorization": "Basic " + base64.btoa(authToken + ":" + 'password is ignored'),
+            "Content-Type": "application/json"
+        },
+        "body": JSON.stringify(body)
+    };
+
+    if(url.includes("http")){
+        fetchUrl = url;
+    } else {
+        fetchUrl = baseUrl + url;
+    }
+
+    return xhr.fetch(fetchUrl, httpOptions).then((response) => {
+        return response.json().then((json) => {
+            request.message.aiceptionResponse = json;
+            console.log(json);
+            return request.ok();
+        });
+    });
+};
+
+##############################
+Payload
+{
+    "action": "detect-object",
+    "body": {
+        "image_url": "http://static.boredpanda.com/blog/wp-content/uploads/2016/01/cute-squirrel-photography-361__700.jpg",
+        "async": false
+    }
+}
+
+##############################
+Event Type:
+Before Publish or Fire
+
+##############################
+Channel:
+aiception-channel

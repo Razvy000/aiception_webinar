@@ -1,0 +1,12 @@
+https://aiception.com/
+
+
+Dashboard
+	Secret API Token: xxxxxxxxxxxxxxxxxxxxxxxxx
+
+Demos
+	Age approximation
+	Detect object
+
+Interactive API
+	detect_object		async=false
