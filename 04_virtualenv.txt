@@ -61,3 +61,13 @@ tip: anaconda
 workon aiception
 
 deactivate
+
+
+# view packages
+pip freeze
+
+# save for later
+pip freeze > requirements.txt
+
+# load 
+pip install -r requirements.txt

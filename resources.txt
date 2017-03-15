@@ -1,0 +1,51 @@
+AIception
+	https://aiception.com
+
+Pubnub
+	https://www.pubnub.com/
+
+Github code
+	https://github.com/Razvy000/aiception_webinar
+
+
+
+
+
+
+
+Tips:
+	use virtualenv or anaconda for python
+
+	gui alternative to scp for transfering files
+		ubuntu: ctr+l in nautilus, enter address: ssh://pi@192.168.1.105
+		windows: install netdrive2
+
+
+
+
+When developing I encoundered some issues and here are the fixes:
+
+
+
+########## sudo apt-get update FAILS due to mirror is down
+
+Change mirrors to use Unable to connect to mirrordirector.raspbian.org
+sudo nano /etc/apt/sources.list
+
+comment out
+#deb http://mirrordirector.raspbian.org/raspbian/ jessie main contrib non-free rpi
+
+add http://www.raspbian.org/RaspbianMirrors
+deb http://raspbian.mirror.iphh.net/raspbian jessie main
+sudo apt-get update
+sudo apt-get upgrade
+
+
+########## VLC does not play raspivid recording on windows 
+1. change VLC settings
+Preferences (ctrl+P) > Show Settings> All > Input/Codecs > Demuxers > Demux module > H264 video demuxer
+
+
+2. convert file using ffmpeg
+ffmpeg -i your.h264 -vcodec copy -an your.mp4
+

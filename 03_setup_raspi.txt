@@ -13,8 +13,22 @@ sudo rpi-update
 sudo reboot
 
 
-natilus trick
+ubuntu natilus trick
 	#ctr+l 
 	#ssh://pi@192.168.1.105
 
+windows install netdrive
+
+
 raspistill -o image.jpg
+
+raspistill
+
+# install git
+sudo apt-get install git
+
+# get the repo for this webinar
+git clone https://github.com/Razvy000/aiception_webinar.git
+cd aiception_webinar
+
+# drag and drop directory into your favorite editor
