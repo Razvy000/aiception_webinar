@@ -1,5 +1,16 @@
 # Files and Resouces for "Hunt and Trap Squirrels with an AI Powered Raspberry Pi" webinar
 
+How cool would it be to make your Raspberry Pi powered project see and understand it’s environment, and even take actions?
+
+In this webinar you’ll learn how PubNub brings the communication layer and how AIception brings the artificial brain layer, through understanding different domains, like object detection, face recognition, and much more.
+
+We’ll put everything together using the PubNub AIception BLOCK to make a simple and fun, yet powerful, blueprint for your future projects.
+
+Presented by:
+Razvan Pistolea, CTO, AIception
+
+
+
 This webinar was done using AIception for image processing and Pubnub for rapid messaging
 
 Useful links
