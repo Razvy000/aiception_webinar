@@ -7,7 +7,8 @@ Pubnub
 Github code
 	https://github.com/Razvy000/aiception_webinar
 
-
+Slides Presentation
+	https://docs.google.com/presentation/d/1HUFeCQL5aQY_1Z85xbRN4BYbTxZLOxqr8b1vbG1iYTs/edit?usp=sharing
 
 
 
