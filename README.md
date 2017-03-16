@@ -9,6 +9,7 @@ We’ll put everything together using the PubNub AIception BLOCK to make a simpl
 Presented by:
 Razvan Pistolea, CTO, AIception
 
+<img src="https://github.com/Razvy000/aiception_webinar/blob/master/myraspi.jpg" alt="my raspi setup" width="500" height="375">
 
 
 This webinar was done using AIception for image processing and Pubnub for rapid messaging
